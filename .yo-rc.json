@@ -1,0 +1,17 @@
+{
+  "generator-lb": {
+    "name": "official_site",
+    "features": [
+      "includeFEFramework",
+      "includeModernizr",
+      "includejQuery",
+      "includeLightingFly"
+    ],
+    "jQuery": "includejQuery2",
+    "feFramework": "includeBootstrap",
+    "sassCompilator": "rubySass",
+    "ES6": false,
+    "multiLanguage": true,
+    "testFramework": false
+  }
+}
