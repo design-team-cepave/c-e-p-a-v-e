@@ -38,7 +38,7 @@ gulp.task('build', 'Build project (use with --force to force build)', function(c
   runSequence(
     ['wiredep','clean'],
     ['styles', 'scripts'],
-    ['images', 'copy', 'extras', 'modernizr'],
+    ['images', 'copy', 'extras'],
     'templates',
     'buildSize',
     function() {

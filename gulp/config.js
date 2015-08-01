@@ -161,25 +161,6 @@ module.exports.jshint = {
   reporter: require('jshint-stylish')
 };
 
-// Modernizr task config
-module.exports.modernizr = {
-  src: [ 
-    path.join(app, scripts,'**/*.js'),
-    path.join(tmp, styles,'*.css')
-  ],
-  dest: path.join(tmp, scripts, 'plugins'),
-  cfg: {
-    silent: true,
-    options: [
-      'setClasses',
-      'addTest',
-      'html5printshiv',
-      'testProp',
-      'fnBind'
-    ]
-  }
-};
-
 // User scripts task
 module.exports.scripts = {
   src: path.join(app, scripts, '**/*.js'),

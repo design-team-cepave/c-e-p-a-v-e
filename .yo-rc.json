@@ -1,11 +1,9 @@
 {
   "generator-lb": {
-    "name": "official_site",
+    "name": "official site",
     "features": [
       "includeFEFramework",
-      "includeModernizr",
-      "includejQuery",
-      "includeLightingFly"
+      "includejQuery"
     ],
     "jQuery": "includejQuery2",
     "feFramework": "includeBootstrap",
