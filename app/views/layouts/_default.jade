@@ -17,6 +17,7 @@ head
   //- endbuild -->
   //- build:css({.tmp,app}) /styles/main.min.css -->
   // bower:css
+  link(rel="stylesheet", href="../bower_components/fullpage.js/jquery.fullPage.css")
   // endbower
   link(rel="stylesheet", href="/styles/main.css")
   //- endbuild -->
@@ -31,11 +32,14 @@ body
     block content
 
   include ../modules/_footer
-  
+
   //- build:js(./app/) /scripts/vendor.min.js -->
   // bower:js
   script(src='../bower_components/jquery/dist/jquery.js')
   script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js')
+  script(src='../bower_components/fullpage.js/jquery.fullPage.js')
+  script(src='../bower_components/fullpage.js/vendors/jquery.easings.min.js')
+  script(src='../bower_components/fullpage.js/vendors/jquery.slimscroll.min.js')
   // endbower
   //- endbuild -->
   //- build:js(.tmp) /scripts/plugins.min.js -->
