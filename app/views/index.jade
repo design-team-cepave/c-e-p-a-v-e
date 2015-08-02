@@ -1,33 +1,54 @@
 extends layouts/_default
 
+mixin section_content(section_title)
+  section.section(class="#{section_title}")
+      .container
+        .row
+          div(class="#{section_title}" + "-caption")
+            h3= '('+ section_title +')'+' We are ????'
+            h4
+              | Subtitle
+              +lipsum(2, "sentences")
+            - for (var i = 0; i < 3; i++)
+              p
+                +lipsum(3, "sentences")
+
+
 block content
   // FullPage
   #fullpage.page-wrap
     section.section(class="home")
       .container
         .row
-          | 01 home
-    section.section(class="about")
-      .container
-        .row
-          | 02 about
-    section.section(class="service")
-      .container
-        .row
-          | 03 service
-    section.section(class="team")
-      .container
-        .row
-          | 04 team
-    section.section(class="blog")
-      .container
-        .row
-          | 05 blog
-    section.section(class="joinus")
-      .container
-        .row
-          | 06 joinus
-    section.section(class="contact")
-      .container
-        .row
-          | 07 contact
+          | home
+    +section_content('about')
+    +section_content('service')
+    +section_content('team')
+    +section_content('blog')
+    +section_content('joinus')
+    +section_content('contact')
+
+    //- section.section(class="about")
+    //-   .container
+    //-     .row
+    //-       | 02 about
+    //- section.section(class="service")
+    //-   .container
+    //-     .row
+    //-       | 03 service
+    //- section.section(class="team")
+    //-   .container
+    //-     .row
+    //-       | 04 team
+    //- section.section(class="blog")
+    //-   .container
+    //-     .row
+    //-       | 05 blog
+    //- section.section(class="joinus")
+    //-   .container
+    //-     .row
+    //-       | 06 joinus
+    //- section.section(class="contact")
+    //-   .container
+    //-     .row
+    //-       | 07 contact
