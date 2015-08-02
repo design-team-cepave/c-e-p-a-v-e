@@ -24,6 +24,7 @@ $(document).ready(function() {
     scrollOverflow: false,
     touchSensitivity: 15,
     normalScrollElementTouchThreshold: 5,
+    fixedElements: '.header , .footer'
   });
 
 

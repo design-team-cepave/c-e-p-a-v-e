@@ -28,6 +28,23 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   width: 100vw;
 }
 
+.header {
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.footer {
+  position: fixed;
+  bottom:0 ;
+  left: 0;
+  width: 100vw;
+  transition: all 0.3s ease-in-out;
+  z-index:99;
+}
+
 section {
   &:nth-child(odd) {
     background: $color-page-odd;
