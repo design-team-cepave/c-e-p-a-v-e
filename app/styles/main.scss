@@ -1,3 +1,7 @@
+// Varables
+@import "modules/varables";
+
+// Bootstrap fonts config
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
 // bower:scss
@@ -18,3 +22,34 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
   a { border-bottom-color: #f7854a; }
 }
+
+%fllpage {
+  height: 100vh;
+  width: 100vw;
+}
+
+section {
+  &:nth-child(odd) {
+    background: $color-page-odd;
+  }
+  &:nth-child(even) {
+    background: $color-page-even;
+  }
+}
+
+/* -------------------- home -------------------- */
+.home {
+  @extend %fllpage;
+}
+/* -------------------- about -------------------- */
+.about {
+}
+/* -------------------- service -------------------- */
+.service {
+}
+/* -------------------- team -------------------- */
+.team { }
+/* -------------------- joinus -------------------- */
+.joinus { }
+/* -------------------- contact -------------------- */
+.contact {}
