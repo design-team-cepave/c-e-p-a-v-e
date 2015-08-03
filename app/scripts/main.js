@@ -6,6 +6,13 @@ $(document).ready(function() {
 
 
 
+   /*---------------- side menu -----------------*/
+  $('.button-nav').on('click', function(){
+    $('.nav-menu').addClass('nav-menu-open');
+    $('body').css('overflow-y','hidden');
+  });
+
+
   /*---------------- full page scroll -----------------*/
   $('#fullpage').fullpage({
     //Scrolling
