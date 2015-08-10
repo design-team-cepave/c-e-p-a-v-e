@@ -53,7 +53,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   .nav-menu-open{
     left: 70%;
   }
-
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    i {
+      font-size: 36px;
+      font-weight: 400;
+      color: #fff;
+    }
+  }
 }
 
 .footer {
