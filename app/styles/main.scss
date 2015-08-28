@@ -44,8 +44,21 @@ a {
   left: 0;
   width: 100vw;
   .logo {
+    width: 229px;
+    height: 58px;
+    background-image: url('../images/cepave-logo-w.svg');
+    background-repeat: no-repeat;
     float: left;
     @include make-xs-column(6);
+    .fp-viewing-aboutPage & {
+      background-image: url('../images/cepave-logo-c.svg');
+    }
+    .fp-viewing-teamPage & {
+      background-image: url('../images/cepave-logo-c.svg');
+    }
+    .fp-viewing-blogPage & {
+      background-image: url('../images/cepave-logo-c.svg');
+    }
   }
   .menu-container {
     @include make-xs-column(6);
@@ -56,9 +69,18 @@ a {
       display: block;
       width: 22px;
       height: 3px;
-      background: $color-grey;
+      background: #ffffff;
       margin-bottom: 6px;
       margin-right: 10px;
+      .fp-viewing-aboutPage & {
+        background: $color-grey;
+      }
+      .fp-viewing-teamPage & {
+        background: $color-grey;
+      }
+      .fp-viewing-blogPage & {
+        background: $color-grey;
+      }
     }
   }
   .nav-menu {
