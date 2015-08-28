@@ -45,12 +45,32 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     left: 100%;
     top: 0;
     width: 100vw;
-    height: 100Vh;
-    background: rgba(black,.85);
+    height: 100vh;
+    background: rgba($nav-menu--bg,1);
     padding: 100px 30px;
     transition:all 0.5s ease-in-out;
   }
-  .nav-menu-open{
+  .navbar-wrapper {
+    list-style-type: none;
+    li {
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+      padding: 10px;
+      &.active {
+        a { color: $color-primary !important; }
+      }
+      a {
+        @include fonts($opensans,15px,300,rgba(255,255,255,.4));
+        transition:all 0.3s ease-in-out;
+        padding: 17px;
+        display: block;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+  .nav-menu-open {
     left: 70%;
   }
   .close-btn {
@@ -58,11 +78,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     position: absolute;
     top: 50px;
     left: 30px;
-    i {
-      font-size: 36px;
-      font-weight: 400;
-      color: #fff;
-    }
   }
 }
 
