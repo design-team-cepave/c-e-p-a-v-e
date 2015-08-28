@@ -50,6 +50,11 @@ $(document).ready(function() {
 
   $.fn.fullpage.reBuild();
 
+  // scrolldown
+  $('#go').on('click' , function(){
+    $.fn.fullpage.moveSectionDown();
+  });
+
 
 });
 
