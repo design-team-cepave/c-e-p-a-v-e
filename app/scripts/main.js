@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   /*---------------- side menu -----------------*/
   $('.button-nav').on('click' , function(e){
-    
+
     $('.nav-menu').addClass('nav-menu-open');
     $.fn.fullpage.setMouseWheelScrolling(false);
     $('body').css('overflow-y','hidden');
@@ -28,22 +28,24 @@ $(document).ready(function() {
   /*---------------- full page scroll -----------------*/
   $('#fullpage').fullpage({
     //Scrolling
-    css3: true,
-    scrollingSpeed: 700,
-    autoScrolling: true,
+    anchors: ['mainPage', 'aboutPage', 'servicePage','teamPage', 'joinusPage', 'blogPage', 'contactPage'],
+    recordHistory:false,
+    menu: '#menu',
+    touchstart: false,
     fitToSection: true,
-    scrollBar: false,
     easing: 'easeInOutCubic',
+    css3: true,
     easingcss3: 'ease',
-    loopBottom: false,
-    loopTop: false,
-    loopHorizontal: true,
-    continuousVertical: false,
+    // loopBottom: false,
+    // loopTop: false,
+    // loopHorizontal: true,
+    // continuousVertical: false,
     normalScrollElements: '#element1, .element2',
-    scrollOverflow: false,
-    touchSensitivity: 15,
-    normalScrollElementTouchThreshold: 5,
-    fixedElements: '.header , .footer'
+    // scrollOverflow: false,
+    touchSensitivity: 100,
+    normalScrollElementTouchThreshold: 0,
+    fixedElements: '.header, .footer'
+
   });
 
   $.fn.fullpage.reBuild();

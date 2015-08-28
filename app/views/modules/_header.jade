@@ -1,5 +1,5 @@
 header.header
-  .container
+  .container(data-menuanchor='mainPage')
     .row
       .logo
         //- img(src="http://placehold.it/200x100/bdce34/ffffff?text=cepave", alt="cepave-logo")
@@ -14,18 +14,18 @@ header.header
           .nav-menu
             a.close-btn
               img(src='images/icons/close.svg')
-            ul.navbar-wrapper
-              li
-                a(href='#') Home
-              li
-                a(href='#') About Us
-              li
-                a(href='#') Service
-              li
-                a(href='#') Team
-              li
-                a(href='#') join Us
-              li
-                a(href='#') blog
-              li
-                a(href='#') Contact us
+            ul.navbar-wrapper(id='menu')
+              li.active(data-menuanchor="mainPage")
+                a(href='#mainPage') Home
+              li(data-menuanchor="aboutPage")
+                a(href='#aboutPage') About Us
+              li(data-menuanchor="servicePage")
+                a(href='#servicePage') Service
+              li(data-menuanchor="teamPage")
+                a(href='#teamPage') Team
+              li(data-menuanchor="joinusPage")
+                a(href='#joinusPage') join Us
+              li(data-menuanchor="blogPage")
+                a(href='#blogPage') blog
+              li(data-menuanchor="contactPage")
+                a(href='#contactPage') Contact us

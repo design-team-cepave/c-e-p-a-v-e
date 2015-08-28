@@ -1,7 +1,7 @@
 extends layouts/_default
 
 mixin section_content(section_title)
-  section.section(class="#{section_title}")
+  section.section(class="#{section_title}", id="#{section_title}_Page")
     .container
       .row
         div(class="#{section_title}" + "-visual")
@@ -18,36 +18,36 @@ mixin section_content(section_title)
 block content
   // FullPage
   #fullpage.page-wrap
-    section.section(class="home")
+    //- +section_content('home')
+    //- +section_content('about')
+    //- +section_content('service')
+    //- +section_content('team')
+    //- +section_content('joinus')
+    //- +section_content('blog')
+    section.section(class="home", id="home_Page", data-anchor="homePage")
       .container
         .row
-          | home
-    +section_content('about')
-    +section_content('service')
-    +section_content('team')
-    +section_content('blog')
-    +section_content('joinus')
+          | 01 home
+    section.section(class="about", id="about_Page", data-anchor="abouPpage")
+      .container
+        .row
+          | 02 about
+    section.section(class="service", id="service_Page", data-anchor="servPcepage")
+      .container
+        .row
+          | 03 service
+    section.section(class="team", id="team_Page", data-anchor="teamPage")
+      .container
+        .row
+          | 04 team
+    section.section(class="joinus", id="joinus_Page", data-anchor="joinPspage")
+      .container
+        .row
+          | 05 joinus
+    section.section(class="blog", id="blog_Page", data-anchor="blogPage")
+      .container
+        .row
+          | 06 blog
     include section/_contact
-
-    //- section.section(class="about")
-    //-   .container
-    //-     .row
-    //-       | 02 about
-    //- section.section(class="service")
-    //-   .container
-    //-     .row
-    //-       | 03 service
-    //- section.section(class="team")
-    //-   .container
-    //-     .row
-    //-       | 04 team
-    //- section.section(class="blog")
-    //-   .container
-    //-     .row
-    //-       | 05 blog
-    //- section.section(class="joinus")
-    //-   .container
-    //-     .row
-    //-       | 06 joinus
 
 

@@ -142,8 +142,11 @@ section {
   .joinus & {
     float: left;
   }
-  .contact & {
+  .blog & {
     float: right;
+  }
+  .contact & {
+    float: left;
   }
 }
 [class$="-visual"] {
@@ -160,21 +163,21 @@ section {
   .team & {
     float: left;
   }
-  .blog & {
-    float: left;
-  }
   .joinus & {
     float: right;
   }
-  .contact & {
+  .blog & {
     float: left;
+  }
+  .contact & {
+    float: right;
   }
 }
 // section
 /* -------------------- home -------------------- */
 
 .home {
-  @extend %fllpage;
+  // @extend %fllpage;
   background-image: linear-gradient(-20deg, nth($section-01, 1) 20%, nth($section-01, 2) 80%);
 }
 /* -------------------- about -------------------- */
@@ -188,11 +191,11 @@ section {
 .team {
 }
 /* -------------------- joinus -------------------- */
-.blog {
+.joinus {
   background-image: linear-gradient(-20deg, nth($section-03, 1) 20%, nth($section-03, 2) 80%);
 }
 /* -------------------- joinus -------------------- */
-.joinus {
+.blog {
 }
 /* -------------------- contact -------------------- */
 .contact {
