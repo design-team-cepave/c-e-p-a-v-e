@@ -1,0 +1,15 @@
+section.section(class="contact")
+  .container
+    .row
+      .contact-caption
+        h3 Contact Us
+      .contact-visual
+        #map-wrapper.map-wrap
+        form(method="post", name="contact", id="contact")
+          .form-group
+            input.form-control(type="text", placeholder="Name", id="name", name="name")
+          .form-group
+            input.form-control(type="email", placeholder="Email", id="eml", name="eml")
+          .form-group
+            textarea.form-control(placeholder="write your text", rows="4", class="", id="comment", name="comment")
+          button(type="submit",class="btn btn-black") Submit

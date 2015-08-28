@@ -2,16 +2,17 @@ extends layouts/_default
 
 mixin section_content(section_title)
   section.section(class="#{section_title}")
-      .container
-        .row
-          div(class="#{section_title}" + "-caption")
-            h3= '('+ section_title +')'+' We are ????'
-            h4
-              | Subtitle
-              +lipsum(2, "sentences")
-            - for (var i = 0; i < 3; i++)
-              p
-                +lipsum(3, "sentences")
+    .container
+      .row
+        div(class="#{section_title}" + "-visual")
+        div(class="#{section_title}" + "-caption")
+          h3= '('+ section_title +')'+' We are ????'
+          h4
+            | Subtitle
+            +lipsum(2, "sentences")
+          - for (var i = 0; i < 3; i++)
+            p
+              +lipsum(3, "sentences")
 
 
 block content
@@ -26,7 +27,7 @@ block content
     +section_content('team')
     +section_content('blog')
     +section_content('joinus')
-    +section_content('contact')
+    include section/_contact
 
     //- section.section(class="about")
     //-   .container
@@ -48,7 +49,5 @@ block content
     //-   .container
     //-     .row
     //-       | 06 joinus
-    //- section.section(class="contact")
-    //-   .container
-    //-     .row
-    //-       | 07 contact
+
+

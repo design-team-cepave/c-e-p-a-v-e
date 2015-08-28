@@ -1,0 +1,52 @@
+script(src='https://maps.googleapis.com/maps/api/js?v=3.exp')
+script.
+  var map;
+  function initialize() {
+    var mapOptions = {
+      zoom: 15,
+      scrollwheel: false,
+      center: new google.maps.LatLng(25.025348, 121.534487),
+      panControl: false,
+      zoomControl: true,
+      styles: [
+        {'stylers': [{ 'hue': '#7fad41' }, { saturation: -95 }]},
+        {
+          'featureType': 'road.arterial',
+          'elementType': 'labels',
+          'stylers': [{'visibility': 'off'}]
+        }
+      ]
+    };
+    var logo = '<img src=\'images/cepave-logo-c.svg\' alt=\'cepave-logo-w\' width=\'160\'>';
+    var contentString =
+      '<div id="content-mapss">' +
+        '<div id="siteNotice">' +
+        '</div>' +
+        '<h1>' +
+        logo +
+        '</h1>' +
+        '<div id="bodyContent">'+
+        '<p>' +'106台北市大安區新生南路三段6號3樓'+
+        '</p>' +
+        '</div>' +
+      '</div>';
+
+    map = new google.maps.Map(document.getElementById('map-wrapper'), mapOptions);
+    var image = 'images/icons/mapmarker.svg';
+    var myLatLng = new google.maps.LatLng( 25.025348, 121.534487);
+    var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    google.maps.event.addListener(beachMarker, 'click', function() {
+      infowindow.open(map,beachMarker);
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);

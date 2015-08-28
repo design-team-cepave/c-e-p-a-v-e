@@ -113,26 +113,99 @@ a {
 
 section {
   &:nth-child(odd) {
-    background: $color-page-odd;
+    // background: $color-page-odd;
   }
   &:nth-child(even) {
-    background: $color-page-even;
+    // background: $color-page-even;
   }
 }
-
+[class$="-caption"] {
+  @include make-xs-column(6);
+  h3 {
+    font-family: alba;
+    font-size: 12rem;
+    letter-spacing: -.1rem;
+    font-weight: 400;
+  }
+  .home & {
+    float: left;
+  }
+  .about & {
+    float: right;
+  }
+  .service & {
+    float: left;
+  }
+  .team & {
+    float: right;
+  }
+  .joinus & {
+    float: left;
+  }
+  .contact & {
+    float: right;
+  }
+}
+[class$="-visual"] {
+  @include make-xs-column(6);
+  .home & {
+    float: right;
+  }
+  .about & {
+    float: left;
+  }
+  .service & {
+    float: right;
+  }
+  .team & {
+    float: left;
+  }
+  .blog & {
+    float: left;
+  }
+  .joinus & {
+    float: right;
+  }
+  .contact & {
+    float: left;
+  }
+}
+// section
 /* -------------------- home -------------------- */
+
 .home {
   @extend %fllpage;
+  background-image: linear-gradient(-20deg, nth($section-01, 1) 20%, nth($section-01, 2) 80%);
 }
 /* -------------------- about -------------------- */
 .about {
 }
 /* -------------------- service -------------------- */
 .service {
+  background-image: linear-gradient(-20deg, nth($section-02, 1) 20%, nth($section-02, 2) 80%);
 }
 /* -------------------- team -------------------- */
-.team { }
+.team {
+}
 /* -------------------- joinus -------------------- */
-.joinus { }
+.blog {
+  background-image: linear-gradient(-20deg, nth($section-03, 1) 20%, nth($section-03, 2) 80%);
+}
+/* -------------------- joinus -------------------- */
+.joinus {
+}
 /* -------------------- contact -------------------- */
-.contact {}
+.contact {
+  background-image: linear-gradient(-20deg, nth($section-04, 1) 20%, nth($section-04, 2) 80%);
+  h3 {
+    color: #ffffff;
+    text-shadow: .2rem .2rem 1rem rgba(0,0,0,0.25);
+  }
+  .map-wrap { height: 340px;}
+  h1.headline-fouri {
+    font-size: 24px;
+    font-weight: 400;
+    color: $color-primary;
+    margin-top: 10px;
+  }
+}

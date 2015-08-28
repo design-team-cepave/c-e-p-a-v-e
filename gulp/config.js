@@ -74,22 +74,22 @@ module.exports.browserSync = {
 module.exports.buildSize = {
   srcAll: dist + '/**/*',
   cfgAll: {
-    title: 'build', 
+    title: 'build',
     gzip: true
   },
   srcCss: path.join(dist, styles, '/**/*'),
   cfgCss: {
-    title: 'CSS', 
+    title: 'CSS',
     gzip: true
   },
   srcJs: path.join(dist, scripts, '/**/*'),
   cfgJs: {
-    title: 'JS', 
+    title: 'JS',
     gzip: true
   },
   srcImages: path.join(dist, images, '/**/*'),
   cfgImages: {
-    title: 'Images', 
+    title: 'Images',
     gzip: false
   }
 };
@@ -155,7 +155,7 @@ module.exports.images = {
 // JSHint task config
 module.exports.jshint = {
   src: [
-    path.join(app, scripts,'**/*.js'), 
+    path.join(app, scripts,'**/*.js'),
     path.join('!' + app, scripts,'plugins/**/*.js') // do not lint external plugins
   ],
   reporter: require('jshint-stylish')
@@ -176,7 +176,7 @@ module.exports.styles = {
     style: 'expanded',
     lineNumbers: true,
     container: 'official-site'
-  }, 
+  },
   autoprefixerCfg: {browsers: ['last 2 version']}
 };
 
@@ -215,11 +215,11 @@ module.exports.useref = {
 module.exports.watch = {
   styles: path.join(app, styles, '/**/*.scss'),
   jade: [
-    path.join(app, views, '/**/*.jade'), 
+    path.join(app, views, '/**/*.jade'),
     path.join(app, views, data, '/**/*.json')
   ],
   scripts: path.join(app, scripts, '/**/*.js'),
-  wiredep: 'bower.json' 
+  wiredep: 'bower.json'
 };
 
 // Wiredep task config
@@ -240,5 +240,5 @@ module.exports.wiredep = {
       ignorePath: '../../',
       overides: {}
     }
-  } 
+  }
 }
