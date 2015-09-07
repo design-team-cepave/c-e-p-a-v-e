@@ -13,7 +13,7 @@
 @font-face {
   font-family: 'cwTeXHei';
   font-style: normal;
-  font-weight: 500;
+  // font-weight: 500;
   src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
   src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'),
        url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'),
@@ -21,6 +21,8 @@
        url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
 }
 $opensans: 'cwTeXHei', 'Open Sans', sans-serif;
+$nunito: 'Nunito', sans-serif;
+$basefont: 1.6rem;
 
 
 // ------------------------------------------------------------
@@ -29,17 +31,49 @@ $opensans: 'cwTeXHei', 'Open Sans', sans-serif;
 $color-primary: #7fad41;
 $color-secondary: #55829E;
 $color-tertiary: #252729;
-
+$black: #3d4348;
+$orange: #e4861f;
 
 // ------------------------------------------------------------
 // :: Site Setting
 // ------------------------------------------------------------
+$assets: '../images/';
 $color-page-odd: $color-primary;
 $color-page-even: #fff;
 $color-grey: #87919a;
 
+$logo-color-01: #FFDA00;
+$logo-color-02: #FF2E9C;
+$logo-color-03: #00BFFF;
+
+$icon-bar-color: white;
 $nav-menu--bg: $color-tertiary;
 $section-01: #1F242E, #414345;
 $section-02: #4B6161, #395673;
 $section-03: #1A627A, #1A5A7A;
 $section-04: #C9614D, #C94D61;
+// $section-02: #FFDA00, #EA4F3C;
+// $section-03: #ff44ff, #ff2e9c;
+// $section-04: #00edff, #00bfff;
+$section-02: #417592, #306684;
+$section-03: #767B1A, #8E941E;
+$section-04: #CA4C53, #D84A51;
+
+$grey:#616e77;
+$l-grey:#87919a;
+$li-grey:#959ba0;
+$black:#3d4348;
+$grey1:#6b767f;
+$b-green:#4b5e62;
+$orange:#e4861f;
+$bl-green:#1a6a7b;
+$d-black:#192025;
+$d-grey:#484848;
+$red:#ca4c4c;
+$dwhite:#eaedf0;
+$dribble:#EA4C89;
+$fb:#2E4DA7;
+$tw:#00ACED;
+$gplus:#CF3427;
+$light-grey:#ccc;
+$yellow:#fbb716;

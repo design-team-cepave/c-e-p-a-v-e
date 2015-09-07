@@ -4,25 +4,30 @@ header.header
       .logo
       .menu-container
         nav.navbars
-          a.button-nav(href='javascripr:;')
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          .nav-menu
+          a.js-nav-btn(href='javascripr:;')
+            span.hamburger-bar
+            span.hamburger-bar
+            span.hamburger-bar
+          .nav-menu-wrapper
             a.close-btn
               img(src='images/icons/close.svg')
-            ul.navbar-wrapper(id='menu')
-              li.active(data-menuanchor="mainPage")
+            ul.nav-menus(id='menu')
+              li.nav-menus__item.active(data-menuanchor="mainPage")
                 a(href='#mainPage') Home
-              li(data-menuanchor="aboutPage")
+              li.nav-menus__item(data-menuanchor="aboutPage")
                 a(href='#aboutPage') About Us
-              li(data-menuanchor="servicePage")
+              li.nav-menus__item(data-menuanchor="servicePage")
                 a(href='#servicePage') Service
-              li(data-menuanchor="teamPage")
+              li.nav-menus__item(data-menuanchor="teamPage")
                 a(href='#teamPage') Team
-              li(data-menuanchor="joinusPage")
+              li.nav-menus__item(data-menuanchor="joinusPage")
                 a(href='#joinusPage') join Us
-              li(data-menuanchor="blogPage")
+              li.nav-menus__item(data-menuanchor="blogPage")
                 a(href='#blogPage') blog
-              li(data-menuanchor="contactPage")
+              li.nav-menus__item(data-menuanchor="contactPage")
                 a(href='#contactPage') Contact us
+        .social
+          a.icon-social.icon-fb(href='#')
+          a.icon-social.icon-gplus(href='#')
+          a.icon-social.icon-twitter(href='#')
+

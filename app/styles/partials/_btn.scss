@@ -1,0 +1,29 @@
+.btn {
+  width: 170px;
+  height: 45px;
+  @include fonts($opensans, 1.4rem, 400, white);
+  text-transform: uppercase;
+  padding: 11px 0;
+  border-radius: 0px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  &-black {
+    background: $black;
+    color: white;
+    border: 1px solid $black;
+    &:hover {
+      border: 1px solid $black;
+      color: $black;
+      background: transparent;
+    }
+  }
+  &-orange {
+    background:$orange;
+    border:1px solid $orange;
+    &:hover{
+      border:1px solid $orange;
+      color:$orange;
+      background: white;
+    }
+  }
+}

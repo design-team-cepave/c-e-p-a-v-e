@@ -1,0 +1,35 @@
+// Pagemixin
+// @mixin color-bar {
+//   @for $i from 1 through 3 {
+//     &:nth-child($i) {
+//       background-color: $logo-color-0$i;
+//     }
+//   }
+// }
+// Pagemixin
+@mixin color-bar {
+  &:nth-child(1) {
+    background-color: $logo-color-01;
+  }
+  &:nth-child(2) {
+    background-color: $logo-color-02;
+  }
+  &:nth-child(3) {
+    background-color: $logo-color-03;
+  }
+}
+@mixin section_caption {
+  h5 {
+    margin: 1.5em 0 0;
+    margin: 1rem 0 0;
+  }
+  p {
+    margin: 1.5em 0;
+    margin: 1rem 0;
+  }
+}
+@mixin team-photo-anm {
+  background-size:cover;
+  background-position:50% 50%;
+  transition: all 0.3s ease-in-out;
+}

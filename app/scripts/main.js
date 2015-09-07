@@ -7,9 +7,9 @@ $(document).ready(function() {
 
 
   /*---------------- side menu -----------------*/
-  $('.button-nav').on('click' , function(e){
+  $('.js-nav-btn').on('click' , function(e){
 
-    $('.nav-menu').addClass('nav-menu-open');
+    $('.nav-menu-wrapper').addClass('nav-menu-wrapper-open');
     $.fn.fullpage.setMouseWheelScrolling(false);
     $('body').css('overflow-y','hidden');
     e.stopPropagation();
@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $('.close-btn').on('click', function(){
 
-    $('.nav-menu').removeClass('nav-menu-open');
+    $('.nav-menu-wrapper').removeClass('nav-menu-wrapper-open');
     $.fn.fullpage.setMouseWheelScrolling(true);
     $('body').css('overflow-y','hidden');
 

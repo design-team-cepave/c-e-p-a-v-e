@@ -4,3 +4,10 @@
   color: $color;
   font-weight: $weight;
 }
+
+@mixin ir($height:99) {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  border: 0 none;
+}
