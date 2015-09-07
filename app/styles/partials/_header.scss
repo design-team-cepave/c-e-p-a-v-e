@@ -1,0 +1,212 @@
+// header.header
+//   .container
+//     .row
+//       .logo
+//       .menu-container
+//         nav.navbars
+//           a.js-nav-btn
+//             span.hamburger-bar
+//             span.hamburger-bar
+//             span.hamburger-bar
+//           .nav-menu-wrapper
+//             a.close-btn
+//               img
+//             ul.nav-menus(id='menu')
+//               li.active
+//         .social
+//           a.icon-fb
+//           a.icon-gplus
+//           a.icon-twitter
+
+// header
+.header {
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  .logo {
+    @include make-xs-column(6);
+  }
+  .menu-container {
+    @include make-xs-column(6);
+  }
+}
+
+// nav.navbars
+.navbars {
+  @extend %fr;
+}
+
+// nav menu
+.nav-menu-wrapper {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px 30px;
+  background: rgba($nav-menu--bg,1);
+  @extend .transformall--300;
+  &-open {
+    left: 70%;
+  }
+}
+.nav-menus {
+  list-style-type: none;
+  &__item {
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    padding: 10px;
+    &.active {
+      a { color: $color-primary !important; }
+    }
+    a {
+      @include fonts($opensans,15px,300,rgba(255,255,255,.4));
+      @extend .transformall--300;
+      padding: 17px;
+      display: block;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+.social {
+  clear: both;
+  float: right;
+  margin-top: 2vh;
+  display: block;
+  .icon-social {
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    border-radius: 50%;
+    @extend .transformall--300;
+    // &:hover {
+    //   &:nth-of-type(1) {
+    //   }
+    //   &:nth-of-type(2) {
+    //   }
+    //   &:nth-of-type(3) {
+    //   }
+    // }
+  }
+}
+
+%logo-colour {
+  background-image: url('../images/cepave-logo-c.svg');
+  @extend .transformall--300;
+}
+%logo-white {
+  background-image: url('../images/cepave-logo-w.svg');
+  @extend .transformall--300;
+}
+// component for header
+.logo {
+  width: 229px;
+  height: 58px;
+  background-repeat: no-repeat;
+  @extend %fl;
+  @extend %logo-white;
+  .fp-viewing-aboutPage & {
+    @extend %logo-colour;
+  }
+  .fp-viewing-teamPage & {
+    @extend %logo-colour;
+  }
+  .fp-viewing-blogPage & {
+    @extend %logo-colour;
+  }
+}
+// hamburger menu
+.hamburger-bar--colour {
+  @include color-bar;
+  @extend .transformall--300;
+}
+.close-btn {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 30px;
+}
+.hamburger-bar {
+  display: block;
+  width: 22px;
+  height: 3px;
+  background: $icon-bar-color;
+  margin-bottom: 6px;
+  margin-right: 10px;
+  @extend .transformall--300;
+  .fp-viewing-aboutPage & {
+    @extend .hamburger-bar--colour;
+  }
+  .fp-viewing-teamPage & {
+    @extend .hamburger-bar--colour;
+  }
+  .fp-viewing-blogPage & {
+    @extend .hamburger-bar--colour;
+  }
+}
+.icon-fb--w {     background: url(../images/icons/icon-fb--w.svg);}
+.icon-fb--g {     background: url(../images/icons/icon-fb--g.svg);}
+.icon-fb--o {     background: url(../images/icons/icon-fb--o.svg);}
+.icon-gplus--w {  background: url(../images/icons/icon-gplus--w.svg);}
+.icon-gplus--g {  background: url(../images/icons/icon-gplus--g.svg);}
+.icon-gplus--o {  background: url(../images/icons/icon-gplus--o.svg);}
+.icon-twitter--w {background: url(../images/icons/icon-twitter--w.svg);}
+.icon-twitter--g {background: url(../images/icons/icon-twitter--g.svg);}
+.icon-twitter--o {background: url(../images/icons/icon-twitter--o.svg);}
+
+.icon {
+  &-fb {
+    @extend .icon-fb--w;
+    &:hover {@extend .icon-fb--o;}
+    .fp-viewing-aboutPage & {
+      @extend .icon-fb--g;
+      &:hover {@extend .icon-fb--o;}
+    }
+    .fp-viewing-teamPage & {
+      @extend .icon-fb--g;
+      &:hover {@extend .icon-fb--o;}
+    }
+    .fp-viewing-blogPage & {
+      @extend .icon-fb--g;
+      &:hover {@extend .icon-fb--o;}
+    }
+  }
+  &-gplus {
+    @extend .icon-gplus--w;
+    &:hover {@extend .icon-gplus--o;}
+    .fp-viewing-aboutPage & {
+      @extend .icon-gplus--g;
+      &:hover {@extend .icon-gplus--o;}
+    }
+    .fp-viewing-teamPage & {
+      @extend .icon-gplus--g;
+      &:hover {@extend .icon-gplus--o;}
+    }
+    .fp-viewing-blogPage & {
+      @extend .icon-gplus--g;
+      &:hover {@extend .icon-gplus--o;}
+    }
+  }
+  &-twitter {
+    @extend .icon-twitter--w;
+    &:hover {@extend .icon-twitter--o;}
+    .fp-viewing-aboutPage & {
+      @extend .icon-twitter--g;
+      &:hover {@extend .icon-twitter--o;}
+    }
+    .fp-viewing-teamPage & {
+      @extend .icon-twitter--g;
+      &:hover {@extend .icon-twitter--o;}
+    }
+    .fp-viewing-blogPage & {
+      @extend .icon-twitter--g;
+      &:hover {@extend .icon-twitter--o;}
+    }
+  }
+}
