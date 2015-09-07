@@ -2,13 +2,13 @@ section.section(class="contact", id="contact_Page", data-anchor="contactpage")
   .container
     .row
       .contact-caption
-        h3 Contact Us
-        h5 Stop by for a talk over a cup of espresso. We’ve got freshly brewed arabica ready for you.
-        a.workus(href='javascript:;')
-          .workus-info
-            h4 Wanna work with us?
-            p Write us or submit our query form.
-          .workus-img
+        h3.contact-caption__title Contact Us
+        h5.contact-caption__subtitle Stop by for a talk over a cup of espresso. We’ve got freshly brewed arabica ready for you.
+        a.work-ad(href='javascript:;')
+          .work-ad-info
+            h4.work-ad__title Wanna work with us?
+            p.work-ad__description Write us or submit our query form.
+          .work-ad-img
             img(src='http://placehold.it/55x70', alt='image')
       .contact-visual
         #map-wrapper.map-wrap
@@ -19,4 +19,4 @@ section.section(class="contact", id="contact_Page", data-anchor="contactpage")
             input.form-control(type="email", placeholder="Email", id="eml", name="eml")
           .form-group1
             textarea.form-control(placeholder="write your text", rows="4", class="", id="comment", name="comment")
-          button(type="submit",class="btn btn-black") Submit
+          button(type="submit",class="contact-form__sumbit") Submit

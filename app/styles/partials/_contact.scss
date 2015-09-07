@@ -3,47 +3,40 @@
  */
 .contact {
   @include sectionGradient($section-04);
-  h3 {
-    color: #ffffff;
-    text-shadow: .2rem .2rem 1rem rgba(0,0,0,0.25);
+  &-caption {
+
+    &__title {
+      color: #ffffff;
+      text-shadow: .2rem .2rem 1rem rgba(0,0,0,0.25);
+    }
+    &__subtitle {
+      font-size: 3rem;
+      @extend %h5;
+    }
   }
-  h5 {
-    font-size: 3rem;
-    @extend %h5;
-  }
-  .workus {
+
+  // work ad
+  .work-ad {
     margin: 20px 0;
     padding: 25px;
     display: inline-block;
     background: $orange;
     text-align: left;
-    p {
-      float: none;
-      color: rgba(255,255,255,0.6);
-    }
-    h4 {
-      @include fonts($nunito , 2.4rem , 300 , rgba(255,255,255,0.6));
-    }
     &-info {
       @include make-xs-column(9);
     }
     &-img {
       @include make-xs-column(3);
+    }
+    &__title {
+      @include fonts($nunito , 2.4rem , 300 , rgba(255,255,255,0.6));
+    }
+    &__description {
+      float: none;
+      color: rgba(255,255,255,0.6);
+    }
+  }
 
-    }
-  }
-  .map-wrap {
-    height: 320px;
-    & + #contact {
-      margin-top: 15px;
-    }
-  }
-  h1.headline-fouri {
-    font-size: 24px;
-    font-weight: 400;
-    color: $color-primary;
-    margin-top: 10px;
-  }
   .form-group {
     @include make-xs-column(6);
     margin-bottom: 0;
@@ -59,7 +52,23 @@
     width: 100%;
     textarea { width:100%; resize:none; }
   }
-  button {
+  .contact-form__sumbit {
     float:right;
+    @extend .btn;
+    @extend .btn-black;
   }
 }
+
+  // map
+  .map-wrap {
+    height: 320px;
+    & + #contact {
+      margin-top: 15px;
+    }
+  }
+  h1.headline-fouri {
+    font-size: 24px;
+    font-weight: 400;
+    color: $color-primary;
+    margin-top: 10px;
+  }
