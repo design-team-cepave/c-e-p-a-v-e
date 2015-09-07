@@ -94,6 +94,9 @@ $arrow-line: 40px;
   .fp-viewing-blogPage & {
     @include arrow--g;
   }
+  .fp-viewing-contactPage & {
+    display: none;
+  }
 }
 @keyframes custbounce {
   0%{
