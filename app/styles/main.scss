@@ -42,15 +42,23 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 body {
+  font-family: $opensans;
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.5;
-  font-family: $opensans;
-  font-size: 14px;
   color: #000000;
-  font-weight: 400;
 }
 
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h2, h3 {
+  font-family: Nunito;
+}
 a {
   cursor: pointer;
   text-decoration: none;
@@ -59,6 +67,14 @@ a {
   }
 }
 
+// h1, h2, h3 {font-family: alba;}
+h1 {font-size: 10*$basefont;}
+h2 {font-size: 8*$basefont;}
+h3 {font-size: 6*$basefont;}
+p {line-height: 1.8;}
+p + .btn {
+  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .footer {
