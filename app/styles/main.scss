@@ -92,8 +92,7 @@ p + .btn {
 // header
 @import "partials/header";
 
-
-
+// section
 section {
   &:nth-child(odd) {
     // background: $color-page-odd;
@@ -105,55 +104,54 @@ section {
 [class$="-caption"] {
   @include make-xs-column(6);
   h3 {
-    font-family: alba;
-    font-size: 12rem;
+    font-family: 'Lobster', cursive;
     letter-spacing: -.1rem;
     font-weight: 400;
   }
   .home & {
-    float: left;
+    @extend %fl;
   }
   .about & {
-    float: right;
+    @extend %fr;
   }
   .service & {
-    float: left;
+    @extend %fl;
   }
   .team & {
     float: right;
   }
   .joinus & {
-    float: left;
+    @extend %fl;
   }
   .blog & {
-    float: right;
+    @extend %fr;
   }
   .contact & {
-    float: left;
+    @extend %fl;
   }
 }
 [class$="-visual"] {
   @include make-xs-column(6);
   .home & {
-    float: right;
+    @extend %fr;
   }
   .about & {
-    float: left;
+    @extend %fl;
   }
   .service & {
-    float: right;
+    @extend %fr;
   }
   .team & {
-    float: left;
+    @extend %fl;
   }
   .joinus & {
-    float: right;
+    @extend %fr;
   }
   .blog & {
-    float: left;
+    @extend %fl;
   }
   .contact & {
-    float: right;
+    @extend %fr;
   }
 }
 // section
