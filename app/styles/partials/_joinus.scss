@@ -1,0 +1,102 @@
+/*
+ joinus
+ */
+.blog {
+  &-visual {
+    @include make-md-column(8);
+    margin-top:30px;
+  }
+  .item {
+    margin-bottom: 30px;
+    overflow: hidden;
+    display:block;
+    background:$d-grey;
+    .blog-containers {
+      overflow:hidden;
+      transition:all 0.3s ease-in-out;
+      width:100%;
+      background:$d-grey;
+    }
+    &:nth-of-type(odd) {
+      .blog-fig {
+        float:left;
+      }
+      .blog-figc {
+        float:right;
+      }
+    }
+    &:nth-of-type(even) {
+      .blog-figc {
+        float:left;
+      }
+      .blog-fig {
+        float:right;
+      }
+    }
+    &:nth-of-type(1) .blog-containers {
+      background-image: url('../images/blog/goraster.png');
+      background-position:50% 50%;
+      background-size: cover;
+    }
+    &:nth-of-type(2) .blog-containers {
+      background-image: url('../images/blog/docker.png');
+      background-position:50% 50%;
+      background-size: cover;
+    }
+    &:nth-of-type(3) .blog-containers {
+      background-image: url('../images/blog/blogd2.jpg');
+      background-position:50% 50%;
+      background-size: cover;
+    }
+    &:nth-of-type(4) .blog-containers {
+      background-image: url('../images/blog/blogd3.jpg');
+      background-position:50% 50%;
+      background-size: cover;
+    }
+  }
+  &-fig {
+    @include make-xs-column(5);
+    overflow: hidden;
+    padding: 0;
+    background-color: #fefefe;
+  }
+
+  &-figc {
+    @include make-xs-column(7);
+    background:$d-grey;
+    padding: 20px 20px;
+    min-height: 220px;
+    h6 {
+      @include fonts($opensans,20px,400,rgba(255,255,255,0.8));
+      font-size: 1.3rem;
+    }
+    p {
+      @include fonts($opensans,13px,400,rgba(255,255,255,0.3));
+      font-size: 1.3rem;
+      margin-top: 7px;
+      &:nth-of-type(1) {
+        font-style: italic;
+      }
+    }
+    h5 {
+      color: black;
+      margin: 20px 0;
+      @include fonts($opensans,13px,400,rgba(255,255,255,1));
+      font-size: 1.6rem;
+    }
+    .space {
+      padding: 0 10px;
+    }
+  }
+
+  &-caption{
+    @include make-md-column(4);
+    h3 {
+      // color:white;
+    }
+    h5 {
+      // color:white;
+      margin:60px 0 90px;
+    }
+  }
+}

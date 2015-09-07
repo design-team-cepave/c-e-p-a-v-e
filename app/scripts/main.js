@@ -5,6 +5,18 @@ var myApp = myApp || {};
 $(document).ready(function() {
 
 
+  /* ------------------ blog page ------------------*/
+  function blogdetails(){
+    // if(!is_explorer){
+    //   window.requestAnimationFrame(blogdetails);
+    // }
+    var blogHeight= $('.blog-figc').outerHeight();
+    $('.blog-containers').css('height' ,blogHeight );
+    var blogHeights= $('.blgpg .blog-figc').outerHeight();
+    $('.blgpg .blog-containers').css('height' ,blogHeights );
+  }
+
+  blogdetails();
 
   /*---------------- side menu -----------------*/
   $('.js-nav-btn').on('click' , function(e){

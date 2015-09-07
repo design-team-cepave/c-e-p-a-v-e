@@ -1,0 +1,14 @@
+/*
+ contact
+ */
+.footer {
+  background:transparent;
+  position: fixed;
+  bottom:0;
+  left:0;
+  padding: 30px 0;
+  width:100vw;
+  @extend .transformall--300;
+  color:rgba(255,255,255,0.5);
+  z-index:99;
+}

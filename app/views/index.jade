@@ -24,30 +24,11 @@ block content
     //- +section_content('team')
     //- +section_content('joinus')
     //- +section_content('blog')
-    section.section(class="home", id="home_Page", data-anchor="homePage")
-      .container
-        .row
-          | 01 home
-    section.section(class="about", id="about_Page", data-anchor="abouPpage")
-      .container
-        .row
-          | 02 about
-    section.section(class="service", id="service_Page", data-anchor="servPcepage")
-      .container
-        .row
-          | 03 service
-    section.section(class="team", id="team_Page", data-anchor="teamPage")
-      .container
-        .row
-          | 04 team
-    section.section(class="joinus", id="joinus_Page", data-anchor="joinPspage")
-      .container
-        .row
-          | 05 joinus
-    section.section(class="blog", id="blog_Page", data-anchor="blogPage")
-      .container
-        .row
-          | 06 blog
+
+    include section/_home
+    include section/_about
+    include section/_service
+    include section/_team
+    include section/_join-us
+    include section/_blog
     include section/_contact
-
-

@@ -77,13 +77,17 @@ p + .btn {
   margin-top: 2rem;
 }
 
-.footer {
-  position: fixed;
-  bottom:0 ;
-  left: 0;
-  width: 100vw;
-  transition: all 0.3s ease-in-out;
-  z-index:99;
+@import 'partials/btn';
+
+.form-control {
+  border-radius: 0;
+  box-shadow:0 0 0 0;
+  height: 50px;
+  margin:15px 0;
+  &:hover , &:focus{
+    box-shadow:0 0 0 0;
+    border:1px solid $color-primary;
+  }
 }
 
 
@@ -96,9 +100,11 @@ p + .btn {
 section {
   &:nth-child(odd) {
     // background: $color-page-odd;
+    .form-control {border: 1px solid white;}
   }
   &:nth-child(even) {
     // background: $color-page-even;
+    .form-control {border: 1px solid $color-grey;}
   }
 }
 [class$="-caption"] {
@@ -119,6 +125,7 @@ section {
   }
   .team & {
     float: right;
+    @include make-xs-column(5);
   }
   .joinus & {
     @extend %fl;
@@ -143,6 +150,7 @@ section {
   }
   .team & {
     @extend %fl;
+    @include make-xs-column(7);
   }
   .joinus & {
     @extend %fr;
@@ -154,58 +162,223 @@ section {
     @extend %fr;
   }
 }
-// section
-/* -------------------- home -------------------- */
 
-.home {
-  // @extend %fllpage;
-  background-image: linear-gradient(-20deg, nth($section-01, 1) 20%, nth($section-01, 2) 80%);
-}
+// section
+@import "partials/home";
+
 /* -------------------- about -------------------- */
 .about {
 }
 /* -------------------- service -------------------- */
 .service {
-  background-image: linear-gradient(-20deg, nth($section-02, 1) 20%, nth($section-02, 2) 80%);
+  @include sectionGradient($section-02);
+  @extend .cw;
 }
 /* -------------------- team -------------------- */
 .team {
-}
-/* -------------------- joinus -------------------- */
-.joinus {
-  background-image: linear-gradient(-20deg, nth($section-03, 1) 20%, nth($section-03, 2) 80%);
-}
-/* -------------------- joinus -------------------- */
-.blog {
-}
-/* -------------------- contact -------------------- */
-.contact {
-  background-image: linear-gradient(-20deg, nth($section-04, 1) 20%, nth($section-04, 2) 80%);
-  h3 {
-    color: #ffffff;
-    text-shadow: .2rem .2rem 1rem rgba(0,0,0,0.25);
+  height: 100vh;
+  width:100vw;
+  &-fig {
+    // @include make-md-column(7);
+    overflow:hidden;
+    img{
+      max-width:100%;
+      @extend .transformall--300;
+    }
   }
-  .map-wrap { height: 340px;}
-  h1.headline-fouri {
-    font-size: 24px;
-    font-weight: 400;
-    color: $color-primary;
-    margin-top: 10px;
+  &-figs {
+    @include make-xs-column(6);
+    & > div {
+      &:nth-of-type(even) {
+        margin-top:30px;
+      }
+    }
+    &:nth-of-type(odd) {
+      & >  div {
+        border:15px solid #ddd;
+        background-position:50% 50%;
+        overflow:hidden;
+        &:nth-of-type(odd) .image-holder {
+          background:url('../images/team/team1.jpg') no-repeat;
+          height: 33vh;
+          @include team-photo-anm;
+        }
+        &:nth-of-type(even) .image-holder {
+          background:url('../images/team/team3.jpg') no-repeat;
+          height: 22vh;
+          @include team-photo-anm;
+        }
+      }
+    }
+    &:nth-of-type(even) {
+      & > div{
+        border:15px solid #ddd;
+        overflow: hidden;
+        &:nth-of-type(odd) .image-holder {
+          height:22vh;
+          background:url('../images/team/team2.jpg');
+          @include team-photo-anm;
+        }
+        &:nth-of-type(even) .image-holder {
+          height: 33vh;
+          background:url('../images/team/team4.jpg');
+          @include team-photo-anm;
+        }
+      }
+    }
+    // height: 100vh;
+    // width:100vw;
+  }
+
+  &:nth-of-type(odd) > div:nth-of-type(odd) .image-holder:hover,
+  &:nth-of-type(odd) > div:nth-of-type(even) .image-holder:hover,
+  &:nth-of-type(even) > div:nth-of-type(odd) .image-holder:hover,
+  &:nth-of-type(even) > div:nth-of-type(even) .image-holder:hover {
+    transform: scale(1.1) rotate(1deg);
   }
 }
 
-// footer
-.footer{
-  background:transparent;
-  position: fixed;
-  bottom:0;
-  left:0;
-  padding: 30px 0;
-  width:100vw;
-  transition:all 0.3s ease-in-out;
-  color:rgba(255,255,255,0.5);
-  z-index:99;
+/* -------------------- joinus -------------------- */
+.joinus {
+  @include sectionGradient($section-03);
+  @extend .cw;
+  // padding: 20vh 0;
+  width:100% !important;
+  &-visual {
+    @include make-md-column(6);
+    text-align: center;
+  }
+  #swingTshirt {
+    margin-top:30px;
+  }
+  &-caption {
+    @include make-md-column(6);
+    @include section-caption;
+  }
+  width: 100vw;
+  height: 100vh;
+  .animated {
+    animation-duration: 4s;
+  }
+  #swingTshirt {
+    position: absolute;
+    // top:10vh;
+    top: 1vh;
+    left: 10vh;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  &-caption {
+    text-align: right;
+  }
+
+  .form-group {
+    @include make-xs-column(6);
+    &:nth-of-type(2) {
+      padding-right: 0px;
+    }
+    .form-control::-webkit-input-placeholder{
+      @include fonts($opensans,14px,400,$color-grey);
+      border-radius:0px;
+    }
+  }
+  .form-group1{
+    float: right;
+
+  }
+  .fileUpload {
+      position: relative;
+      overflow: hidden;
+      margin:10px;
+      padding:4px 0;
+      float: left;
+      span{
+        @include fonts($opensans,15px,400,white);
+        margin-left:7px;
+      }
+  }
+  .btns {
+    color: white;
+    height: 40px;
+    width: 170px;
+    // background: white;
+    text-align: center;
+    border-right:1px solid rgba(255,255,255,0.5);
+  }
+  .fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  button {
+    margin:10px 0 10px 15px;
+    border-radius:0px;
+    height:40px;
+    padding:10px 0;
+    &:focus{
+      box-shadow:0 0 0 0;
+      color:white;
+    }
+  }
+
+  .custswing {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: custswing;
+    animation-name: custswing;
+  }
+  .jabs {
+    list-style-type: none;
+    margin: 1em 0;
+    margin: 2rem 0;
+    .jab {
+      a {
+        color: #fff;
+        // text-decoration: none;
+      }
+    }
+  }
 }
+/*------------------ Keyframe ----------------------*/
+
+@keyframes custswing {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 10deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+// joinus
+@import "partials/joinus";
+
+// contact
+@import "partials/contact";
+.form-group {
+  @include make-sm-column(6);
+  &:nth-of-type(3){
+    @include make-sm-column(12);
+  }
+}
+// footer
+@import "partials/footer";
+
 .arrow {
   width:30px;
   height: 30px;
@@ -258,4 +431,8 @@ section {
 .fa-angle-down.animated.custbounce {
   -webkit-animation-iteration-count: infinite;
   animation-delay:5s;
+}
+h1.headline-fouri {
+  @include ir;
+  margin:10px 0;
 }
