@@ -1,102 +1,126 @@
 /*
  joinus
  */
-.blog {
+.joinus {
+  // padding: 20vh 0;
+  width:100% !important;
   &-visual {
-    @include make-md-column(8);
+    @include make-md-column(6);
+    text-align: center;
+  }
+  #swingTshirt {
     margin-top:30px;
   }
-  .item {
-    margin-bottom: 30px;
-    overflow: hidden;
-    display:block;
-    background:$d-grey;
-    .blog-containers {
-      overflow:hidden;
-      transition:all 0.3s ease-in-out;
-      width:100%;
-      background:$d-grey;
+  &-caption {
+    @include make-md-column(6);
+    @include section-caption;
+  }
+  width: 100vw;
+  height: 100vh;
+  .animated {
+    animation-duration: 4s;
+  }
+  #swingTshirt {
+    position: absolute;
+    // top:10vh;
+    top: 1vh;
+    left: 10vh;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  &-caption {
+    text-align: right;
+  }
+
+  .form-group {
+    @include make-xs-column(6);
+    &:nth-of-type(2) {
+      padding-right: 0px;
     }
-    &:nth-of-type(odd) {
-      .blog-fig {
-        float:left;
-      }
-      .blog-figc {
-        float:right;
-      }
-    }
-    &:nth-of-type(even) {
-      .blog-figc {
-        float:left;
-      }
-      .blog-fig {
-        float:right;
-      }
-    }
-    &:nth-of-type(1) .blog-containers {
-      background-image: url('../images/blog/goraster.png');
-      background-position:50% 50%;
-      background-size: cover;
-    }
-    &:nth-of-type(2) .blog-containers {
-      background-image: url('../images/blog/docker.png');
-      background-position:50% 50%;
-      background-size: cover;
-    }
-    &:nth-of-type(3) .blog-containers {
-      background-image: url('../images/blog/blogd2.jpg');
-      background-position:50% 50%;
-      background-size: cover;
-    }
-    &:nth-of-type(4) .blog-containers {
-      background-image: url('../images/blog/blogd3.jpg');
-      background-position:50% 50%;
-      background-size: cover;
+    .form-control::-webkit-input-placeholder{
+      @include fonts($opensans,14px,400,$color-grey);
+      border-radius:0px;
     }
   }
-  &-fig {
-    @include make-xs-column(5);
-    overflow: hidden;
+  .form-group1{
+    float: right;
+
+  }
+  .fileUpload {
+      position: relative;
+      overflow: hidden;
+      margin:10px;
+      padding:4px 0;
+      float: left;
+      span{
+        @include fonts($opensans,15px,400,white);
+        margin-left:7px;
+      }
+  }
+  .btns {
+    color: white;
+    height: 40px;
+    width: 170px;
+    // background: white;
+    text-align: center;
+    border-right:1px solid rgba(255,255,255,0.5);
+  }
+  .fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
     padding: 0;
-    background-color: #fefefe;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  button {
+    margin:10px 0 10px 15px;
+    border-radius:0px;
+    height:40px;
+    padding:10px 0;
+    &:focus{
+      box-shadow:0 0 0 0;
+      color:white;
+    }
   }
 
-  &-figc {
-    @include make-xs-column(7);
-    background:$d-grey;
-    padding: 20px 20px;
-    min-height: 220px;
-    h6 {
-      @include fonts($opensans,20px,400,rgba(255,255,255,0.8));
-      font-size: 1.3rem;
-    }
-    p {
-      @include fonts($opensans,13px,400,rgba(255,255,255,0.3));
-      font-size: 1.3rem;
-      margin-top: 7px;
-      &:nth-of-type(1) {
-        font-style: italic;
+  .custswing {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: custswing;
+    animation-name: custswing;
+  }
+  .jabs {
+    list-style-type: none;
+    margin: 1em 0;
+    margin: 2rem 0;
+    .jab {
+      a {
+        color: #fff;
+        // text-decoration: none;
       }
     }
-    h5 {
-      color: black;
-      margin: 20px 0;
-      @include fonts($opensans,13px,400,rgba(255,255,255,1));
-      font-size: 1.6rem;
-    }
-    .space {
-      padding: 0 10px;
-    }
   }
+}
+/*------------------ Keyframe ----------------------*/
 
-  &-caption{
-    @include make-md-column(4);
-    h3 {
-      // color:white;
-    }
-    h5 {
-      // color:white;
-      margin:60px 0 90px;
-    }
+@keyframes custswing {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 10deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 0deg);
   }
 }

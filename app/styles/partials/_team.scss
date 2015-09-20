@@ -1,0 +1,64 @@
+/*
+ team
+ */
+.team {
+  @include sectionGradient($section-02);
+  @extend .cw;
+  height: 100vh;
+  width:100vw;
+  &-fig {
+    overflow:hidden;
+    img{
+      max-width:100%;
+      @extend .transformall--300;
+    }
+  }
+  &-figs {
+    @include make-xs-column(6);
+    & > div {
+      &:nth-of-type(even) {
+        margin-top:30px;
+      }
+    }
+    &:nth-of-type(odd) {
+      & >  div {
+        border:15px solid #ddd;
+        background-position:50% 50%;
+        overflow:hidden;
+        &:nth-of-type(odd) .image-holder {
+          background:url('../images/team/team1.jpg') no-repeat;
+          height: 33vh;
+          @include team-photo-anm;
+        }
+        &:nth-of-type(even) .image-holder {
+          background:url('../images/team/team3.jpg') no-repeat;
+          height: 22vh;
+          @include team-photo-anm;
+        }
+      }
+    }
+    &:nth-of-type(even) {
+      & > div{
+        border:15px solid #ddd;
+        overflow: hidden;
+        &:nth-of-type(odd) .image-holder {
+          height:22vh;
+          background:url('../images/team/team2.jpg');
+          @include team-photo-anm;
+        }
+        &:nth-of-type(even) .image-holder {
+          height: 33vh;
+          background:url('../images/team/team4.jpg');
+          @include team-photo-anm;
+        }
+      }
+    }
+  }
+
+  &:nth-of-type(odd) > div:nth-of-type(odd) .image-holder:hover,
+  &:nth-of-type(odd) > div:nth-of-type(even) .image-holder:hover,
+  &:nth-of-type(even) > div:nth-of-type(odd) .image-holder:hover,
+  &:nth-of-type(even) > div:nth-of-type(even) .image-holder:hover {
+    transform: scale(1.1) rotate(1deg);
+  }
+}
