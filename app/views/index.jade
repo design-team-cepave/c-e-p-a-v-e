@@ -1,18 +1,18 @@
 extends layouts/_default
 
-mixin section_content(section_title)
-  section.section(class="#{section_title}", id="#{section_title}_Page")
-    .container
-      .row
-        div(class="#{section_title}" + "-visual")
-        div(class="#{section_title}" + "-caption")
-          h3= '('+ section_title +')'+' We are ????'
-          h4
-            | Subtitle
-            +lipsum(2, "sentences")
-          - for (var i = 0; i < 3; i++)
-            p
-              +lipsum(3, "sentences")
+//- mixin section_content(section_title)
+//-   section.section(class="#{section_title}", id="#{section_title}_Page")
+//-     .container
+//-       .row
+//-         div(class="#{section_title}" + "-visual")
+//-         div(class="#{section_title}" + "-caption")
+//-           h3= '('+ section_title +')'+' We are ????'
+//-           h4
+//-             | Subtitle
+//-             +lipsum(2, "sentences")
+//-           - for (var i = 0; i < 3; i++)
+//-             p
+//-               +lipsum(3, "sentences")
 
 
 block content
@@ -27,7 +27,7 @@ block content
 
     include section/_home
     include section/_about
-    include section/_service
+    //- include section/_service
     include section/_team
     include section/_join-us
     include section/_blog
