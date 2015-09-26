@@ -2,8 +2,6 @@
  team
  */
 .team {
-  @include sectionGradient($section-02);
-  @extend .cw;
   height: 100vh;
   width:100vw;
   &-fig {
