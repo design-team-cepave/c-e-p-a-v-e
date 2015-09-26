@@ -1,0 +1,51 @@
+.about {
+  &-inner {
+    position: absolute;
+  }
+  &-mainfig {
+    text-align: center;
+    position: relative;
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .fig1 {
+    z-index:0;
+    top: 10px;
+    left: 122px;
+    transition: all 0.3s ease-in-out;
+  }
+  .fig2 {
+    top: 99px;
+    left: 144px;
+    transition: all 0.5s ease-in-out;
+    img {
+      z-index: 0;
+    }
+  }
+  .fig3 {
+    left: 176px;
+    bottom: 16px;
+    transition: all 0.7s ease-in-out;
+    img {
+      z-index: 0;
+    }
+  }
+  .fig4 {
+    left: 165px;
+    bottom: 16px;
+    transition: all 0.8s ease-in-out;
+    img {
+      z-index: 0;
+    }
+  }
+  .fig5 {
+    top: 134px;
+    right: 168px;
+    transition: all 0.3s ease-in-out;
+    img {
+      z-index: 0;
+    }
+  }
+}

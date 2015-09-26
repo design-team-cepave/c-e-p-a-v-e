@@ -129,6 +129,7 @@ section {
   }
   .about & {
     @extend %fr;
+    @include make-xs-column(6);
   }
   // .service & {
   //   @extend %fl;
@@ -154,6 +155,7 @@ section {
   }
   .about & {
     @extend %fl;
+    @include make-xs-column(6);
   }
   // .service & {
   //   @extend %fr;
@@ -179,6 +181,8 @@ section {
 // about
 .about {
 }
+@import "partials/about";
+
 
 // team
 .team {
