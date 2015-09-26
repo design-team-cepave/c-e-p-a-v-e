@@ -2,11 +2,11 @@
  contact
  */
 .contact {
+
   &-caption {
 
     &__title {
-      color: #ffffff;
-      text-shadow: .2rem .2rem 1rem rgba(0,0,0,0.25);
+        text-shadow: .2rem .2rem 1rem rgba(0,0,0,0.25);
     }
     &__subtitle {
       font-size: 3rem;
