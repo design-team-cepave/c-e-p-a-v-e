@@ -6,7 +6,7 @@
   &-caption {
 
     &__title {
-        text-shadow: .2rem .2rem 1rem rgba(0,0,0,0.25);
+        // text-shadow: .2rem .2rem 1rem rgba(0,0,0,0.25);
     }
     &__subtitle {
       font-size: 3rem;
@@ -28,11 +28,11 @@
       @include make-xs-column(3);
     }
     &__title {
-      @include fonts($nunito , 2.4rem , 300 , rgba(255,255,255,0.6));
+      // @include fonts($nunito , 2.4rem , 300 , inherit);
     }
     &__description {
       float: none;
-      color: rgba(255,255,255,0.6);
+      color: inherit;
     }
   }
 

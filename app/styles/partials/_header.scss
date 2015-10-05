@@ -85,14 +85,6 @@
     margin-left: 10px;
     border-radius: 50%;
     @extend .transformall--300;
-    // &:hover {
-    //   &:nth-of-type(1) {
-    //   }
-    //   &:nth-of-type(2) {
-    //   }
-    //   &:nth-of-type(3) {
-    //   }
-    // }
   }
 }
 
@@ -114,10 +106,10 @@
   .fp-viewing-aboutPage & {
     @extend %logo-colour;
   }
-  .fp-viewing-teamPage & {
+  .fp-viewing-joinusPage & {
     @extend %logo-colour;
   }
-  .fp-viewing-blogPage & {
+  .fp-viewing-contactPage & {
     @extend %logo-colour;
   }
 }
@@ -143,10 +135,10 @@
   .fp-viewing-aboutPage & {
     @extend .hamburger-bar--colour;
   }
-  .fp-viewing-teamPage & {
+  .fp-viewing-joinusPage & {
     @extend .hamburger-bar--colour;
   }
-  .fp-viewing-blogPage & {
+  .fp-viewing-contactPage & {
     @extend .hamburger-bar--colour;
   }
 }
@@ -168,11 +160,11 @@
       @extend .icon-fb--g;
       &:hover {@extend .icon-fb--o;}
     }
-    .fp-viewing-teamPage & {
+    .fp-viewing-joinusPage & {
       @extend .icon-fb--g;
       &:hover {@extend .icon-fb--o;}
     }
-    .fp-viewing-blogPage & {
+    .fp-viewing-contactPage & {
       @extend .icon-fb--g;
       &:hover {@extend .icon-fb--o;}
     }
@@ -184,11 +176,11 @@
       @extend .icon-gplus--g;
       &:hover {@extend .icon-gplus--o;}
     }
-    .fp-viewing-teamPage & {
+    .fp-viewing-joinusPage & {
       @extend .icon-gplus--g;
       &:hover {@extend .icon-gplus--o;}
     }
-    .fp-viewing-blogPage & {
+    .fp-viewing-contactPage & {
       @extend .icon-gplus--g;
       &:hover {@extend .icon-gplus--o;}
     }
@@ -200,11 +192,11 @@
       @extend .icon-twitter--g;
       &:hover {@extend .icon-twitter--o;}
     }
-    .fp-viewing-teamPage & {
+    .fp-viewing-joinusPage & {
       @extend .icon-twitter--g;
       &:hover {@extend .icon-twitter--o;}
     }
-    .fp-viewing-blogPage & {
+    .fp-viewing-contactPage & {
       @extend .icon-twitter--g;
       &:hover {@extend .icon-twitter--o;}
     }
