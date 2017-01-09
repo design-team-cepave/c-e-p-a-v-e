@@ -40,7 +40,7 @@ $(document).ready(function() {
   /*---------------- full page scroll -----------------*/
   $('#fullpage').fullpage({
     //Scrolling
-    anchors: ['mainPage', 'aboutPage', 'servicePage','teamPage', 'joinusPage', 'blogPage', 'contactPage'],
+    anchors: ['mainPage', 'aboutPage', 'teamPage', 'joinusPage', 'blogPage', 'contactPage'],
     recordHistory:false,
     menu: '#menu',
     touchstart: false,
